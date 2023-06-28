@@ -13,6 +13,10 @@ ul li {
   cursor: pointer;
 }
 
+ul li.active {
+  background: #cccccc;
+}
+
 ul li:hover {
   background: #d4d4d4;
 }

@@ -36,8 +36,11 @@ function App() {
             {userList.length > 0 ? (
               userList.map((item, key) => (
                 <a href="#details" className="text-black" key={key}>
+                  {/* {console.log()} */}
                   <li
-                    className="rounded-1 text-start row align-items-center mx-0"
+                    className={`rounded-1 text-start row align-items-center mx-0 ${
+                      id === (key + 1).toString() ? "active" : ""
+                    }`}
                     style={{ padding: "8px 10px", marginTop: "10px" }}
                     onClick={() => {
                       setId(item.id);
@@ -46,7 +49,7 @@ function App() {
                     <img
                       src={item.avatar}
                       alt=""
-                      className="rounded-circle img-fluid col-1"
+                      className="rounded-circle img-fluid col-1 px-0 px-lg-2"
                     />
                     <span className="col-11">
                       {item.profile.firstName} {item.profile.lastName}
